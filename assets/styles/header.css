@@ -1,0 +1,45 @@
+/* variables */
+/* colors */
+/* shadows */
+/* borders */
+header {
+  display: flex;
+  padding: 6rem;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header__logo {
+  font-family: "Pacifico", cursive;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+  color: #333333;
+}
+header nav {
+  display: flex;
+  padding: 1rem 3.6rem;
+  gap: 3.2rem;
+  font-size: 2rem;
+}
+header nav a {
+  padding: 1.2rem 2rem;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  text-decoration: none;
+  color: #333333;
+}
+header nav a:hover {
+  border-radius: 2.6rem;
+  border: 1px solid #544d4d;
+}
+header nav a:last-child {
+  border-radius: 2.6rem;
+  align-self: center;
+  color: #ffffff;
+  background-color: #544d4d;
+}
+header nav a:last-child:hover {
+  border-radius: 2.6rem;
+  box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+}/*# sourceMappingURL=header.css.map */

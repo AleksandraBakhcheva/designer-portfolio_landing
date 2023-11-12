@@ -1,0 +1,49 @@
+@import "./variables.scss";
+
+header {
+  display: flex;
+  padding: 6rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__logo {
+    font-family: "Pacifico", cursive;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: $header-text-shadow;
+    color: $font-main-color;
+  }
+
+  nav {
+    display: flex;
+    padding: 1rem 3.6rem;
+    gap: 3.2rem;
+    font-size: 2rem;
+
+    a {
+      padding: 1.2rem 2rem;
+      border: 1px solid transparent;
+      transition: all 0.5s;
+      text-decoration: none;
+      color: $font-main-color;
+
+      &:hover {
+        border-radius: 2.6rem;
+        border: $nav-hover-border;
+      }
+    }
+
+    a:last-child {
+      border-radius: 2.6rem;
+      align-self: center;
+      color: $nav-button-color;
+      background-color: $nav-button-background;
+
+      &:hover {
+        border-radius: 2.6rem;
+        box-shadow: $nav-hover-button-shadow;
+      }
+    }
+  }
+}
