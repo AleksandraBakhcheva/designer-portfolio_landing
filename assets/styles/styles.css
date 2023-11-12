@@ -1,0 +1,289 @@
+/* normalize.css */
+@import url(https://necolas.github.io/normalize.css/latest/normalize.css);
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Pacifico&family=Roboto&display=swap");
+/* variables */
+/* colors */
+/* shadows */
+/* borders */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.container {
+  height: 100%;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 75px 35px rgb(84, 77, 77);
+}
+
+/* variables */
+/* colors */
+/* shadows */
+/* borders */
+.theme {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+}
+
+html[data-theme=dark] {
+  color-scheme: dark;
+}
+html[data-theme=dark] .header__logo,
+html[data-theme=dark] nav a {
+  color: #ffffff;
+}
+
+[data-theme=dark] .theme-toggle {
+  --icon-fill: hsl(210 10% 70%);
+  --icon-fill-hover: hsl(210 15% 90%);
+}
+
+.sun-and-moon > :is(.moon, .sun, .sun-beams) {
+  transform-origin: center;
+}
+
+.sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill);
+  stroke-width: 2px;
+}
+
+.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill-hover);
+}
+
+[data-theme=dark] .sun-and-moon > .sun {
+  transform: scale(1.75);
+}
+
+[data-theme=dark] .sun-and-moon > .sun-beams {
+  opacity: 0;
+}
+
+[data-theme=dark] .sun-and-moon > .moon > circle {
+  transform: translateX(-7px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sun-and-moon > .sun {
+    transition: transform 0.5s var(--ease-elastic-3);
+  }
+  .sun-and-moon > .sun-beams {
+    transition: transform 0.5s var(--ease-elastic-4), opacity 0.5s var(--ease-3);
+  }
+  .sun-and-moon .moon > circle {
+    transition: transform 0.25s var(--ease-out-5);
+  }
+  @supports (cx: 1) {
+    .sun-and-moon .moon > circle {
+      transition: cx 0.25s var(--ease-out-5);
+    }
+  }
+  [data-theme=dark] .sun-and-moon > .sun {
+    transition-timing-function: var(--ease-3);
+    transition-duration: 0.25s;
+    transform: scale(1.75);
+  }
+  [data-theme=dark] .sun-and-moon > .sun-beams {
+    transition-duration: 0.15s;
+    transform: rotateZ(-25deg);
+  }
+  [data-theme=dark] .sun-and-moon > .moon > circle {
+    transition-duration: 0.5s;
+    transition-delay: 0.25s;
+  }
+}
+/* variables */
+/* colors */
+/* shadows */
+/* borders */
+header {
+  display: flex;
+  padding: 6rem;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header__logo {
+  font-family: "Pacifico", cursive;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+  color: #333333;
+}
+header nav {
+  display: flex;
+  padding: 1rem 3.6rem;
+  gap: 3.2rem;
+  font-size: 2rem;
+}
+header nav a {
+  padding: 1.2rem 2rem;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  text-decoration: none;
+  color: #333333;
+}
+header nav a:hover {
+  border-radius: 2.6rem;
+  border: 1px solid #544d4d;
+}
+header nav a:last-child {
+  border-radius: 2.6rem;
+  align-self: center;
+  color: #ffffff;
+  background-color: #333333;
+}
+header nav a:last-child:hover {
+  border-radius: 2.6rem;
+  box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* variables */
+/* colors */
+/* shadows */
+/* borders */
+main .main__general-block,
+main .main__about-block,
+main .main__portfolio-block {
+  display: grid;
+  padding: 3rem 14rem;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 100%;
+  align-items: center;
+}
+main .main__general-block img,
+main .main__about-block img,
+main .main__portfolio-block img {
+  max-width: 400px;
+}
+main .main__general-block .general-block__header,
+main .main__general-block .about-block__header,
+main .main__general-block .portfolio-block__header,
+main .main__about-block .general-block__header,
+main .main__about-block .about-block__header,
+main .main__about-block .portfolio-block__header,
+main .main__portfolio-block .general-block__header,
+main .main__portfolio-block .about-block__header,
+main .main__portfolio-block .portfolio-block__header {
+  font-size: 4rem;
+  line-height: 100%;
+}
+main .main__general-block .general-block__text,
+main .main__general-block .about-block__text,
+main .main__general-block .contacts-block__text,
+main .main__about-block .general-block__text,
+main .main__about-block .about-block__text,
+main .main__about-block .contacts-block__text,
+main .main__portfolio-block .general-block__text,
+main .main__portfolio-block .about-block__text,
+main .main__portfolio-block .contacts-block__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 170%;
+  text-align: justify;
+}
+main .main__about-block {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  gap: 2%;
+}
+main .main__portfolio-block {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+}
+main .main__portfolio-block div img {
+  max-height: 500px;
+}
+main .main__portfolio-block img {
+  cursor: pointer;
+}
+
+/* @media screen and (max-width: 1024px) {
+  .main__title-top,
+  .main__title-bottom {
+    color: var(--font-main-color);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    padding: 0;
+    grid-template-columns: 41.2rem;
+  }
+
+  .main__title-top {
+    color: var(--main-title-top-color);
+  }
+
+  .main__title-bottom {
+    color: var(--main-title-bottom-color);
+  }
+}
+ */
+/* variables */
+/* colors */
+/* shadows */
+/* borders */
+footer {
+  padding: 2%;
+  background-color: rgba(84, 77, 77, 0.3019607843);
+}
+footer div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3.6rem;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+footer div:first-child div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #333333;
+}
+footer div:first-child a {
+  padding: 1.2rem 2rem;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  text-decoration: none;
+  color: #333333;
+}
+footer div:first-child a:hover {
+  border-radius: 2.6rem;
+  border: 1px solid #544d4d;
+}
+footer #email {
+  border: none;
+}
+footer #email:hover {
+  border: none;
+}
+footer .footer__links {
+  display: flex;
+  padding: 0.2%;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #333333;
+}
+footer .footer__links a {
+  text-decoration: none;
+  color: #333333;
+}/*# sourceMappingURL=styles.css.map */
