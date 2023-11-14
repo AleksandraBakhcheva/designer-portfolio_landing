@@ -1,7 +1,9 @@
+@import "./variables.scss";
+
 @media screen and (max-width: 1400px) {
-  /* html {
-    font-size: 50%;
-  } */
+  html {
+    font-size: 60%;
+  }
 
   .theme {
     top: 1%;
@@ -16,6 +18,25 @@
   main {
     img {
       width: 95%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    div:first-child {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      div {
+        align-items: center;
+      }
+    }
+
+    div:nth-child(2) nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
@@ -59,5 +80,39 @@
     .main__about-block {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+@media (any-hover: hover) {
+  header nav {
+    a:hover {
+      border-radius: 2.6rem;
+      border: $nav-hover-border;
+    }
+
+    a:last-child:hover {
+      border-radius: 2.6rem;
+      box-shadow: $nav-hover-button-shadow;
+    }
+  }
+
+  footer div:first-child a:hover {
+    border-bottom: solid 1.5px $nav-button-color;
+  }
+}
+
+@media (hover: none) {
+  header nav {
+    a:hover {
+      border: none;
+    }
+
+    a:last-child:hover {
+      box-shadow: none;
+    }
+  }
+
+  footer div:first-child a:hover {
+    border: none;
   }
 }

@@ -1,7 +1,11 @@
+/* variables */
+/* colors */
+/* shadows */
+/* borders */
 @media screen and (max-width: 1400px) {
-  /* html {
-    font-size: 50%;
-  } */
+  html {
+    font-size: 60%;
+  }
   .theme {
     top: 1%;
   }
@@ -12,6 +16,20 @@
   }
   main img {
     width: 95%;
+  }
+}
+@media screen and (max-width: 800px) {
+  footer div:first-child {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer div:first-child div {
+    align-items: center;
+  }
+  footer div:nth-child(2) nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 700px) {
@@ -41,5 +59,29 @@
 @media screen and (max-width: 480px) {
   main .main__about-block {
     grid-template-columns: 1fr;
+  }
+}
+@media (any-hover: hover) {
+  header nav a:hover {
+    border-radius: 2.6rem;
+    border: 1px solid #544d4d;
+  }
+  header nav a:last-child:hover {
+    border-radius: 2.6rem;
+    box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+  }
+  footer div:first-child a:hover {
+    border-bottom: solid 1.5px #ffffff;
+  }
+}
+@media (hover: none) {
+  header nav a:hover {
+    border: none;
+  }
+  header nav a:last-child:hover {
+    box-shadow: none;
+  }
+  footer div:first-child a:hover {
+    border: none;
   }
 }/*# sourceMappingURL=media-queries.css.map */
