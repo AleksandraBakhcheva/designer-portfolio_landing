@@ -1,0 +1,53 @@
+@import "./variables.scss";
+
+footer {
+  padding: 2%;
+  background-color: $footer-background;
+
+  div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.6rem;
+    gap: 1rem;
+    font-size: 1.5rem;
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-start;
+      color: $nav-button-color;
+    }
+
+    a {
+      margin: 1.2rem 2rem;
+      padding-bottom: 0.5rem;
+      transition: all 0.2s;
+      text-decoration: none;
+      border-bottom: solid 1.5px transparent;
+      color: $nav-button-color;
+    }
+  }
+
+  #email a {
+    border: none;
+
+    &:hover {
+      border: none;
+    }
+  }
+
+  .footer__links {
+    display: flex;
+    padding: 0.2%;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: $nav-button-color;
+
+    a {
+      text-decoration: none;
+      color: $nav-button-color;
+    }
+  }
+}

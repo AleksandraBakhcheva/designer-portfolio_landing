@@ -1,0 +1,48 @@
+/* variables */
+/* colors */
+/* shadows */
+/* borders */
+footer {
+  padding: 2%;
+  background-color: #333333;
+}
+footer div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3.6rem;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+footer div:first-child div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #ffffff;
+}
+footer div:first-child a {
+  margin: 1.2rem 2rem;
+  padding-bottom: 0.5rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  border-bottom: solid 1.5px transparent;
+  color: #ffffff;
+}
+footer #email a {
+  border: none;
+}
+footer #email a:hover {
+  border: none;
+}
+footer .footer__links {
+  display: flex;
+  padding: 0.2%;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+footer .footer__links a {
+  text-decoration: none;
+  color: #ffffff;
+}/*# sourceMappingURL=footer.css.map */
