@@ -16,6 +16,12 @@
   }
 
   main {
+    .main__general-block,
+    .main__about-block,
+    .main__portfolio-block {
+      padding: 3rem 5rem;
+    }
+
     img {
       width: 95%;
     }
@@ -23,6 +29,10 @@
 }
 
 @media screen and (max-width: 800px) {
+  main .main__portfolio-block {
+    grid-template-columns: 1fr;
+  }
+
   footer {
     div:first-child {
       flex-wrap: wrap;
@@ -36,7 +46,7 @@
     div:nth-child(2) nav {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
     }
   }
 }
@@ -68,22 +78,46 @@
     }
 
     .main__portfolio-block {
-      grid-template-columns: 1fr;
-      padding: 0 6rem 3rem;
-      gap: 1rem;
+      padding: 6rem 3rem;
     }
   }
 }
 
 @media screen and (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  .theme {
+    top: 0.5%;
+  }
+
   main {
+    .main__general-block {
+      padding: 4rem 3rem;
+    }
+
     .main__about-block {
       grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      padding: 4rem 3rem;
+
+      div:first-child {
+        height: max-content;
+      }
+    }
+    .main__portfolio-block {
+      padding: 4rem 3rem;
     }
   }
 }
 
 @media (any-hover: hover) {
+  .container {
+    border-radius: 3rem;
+    box-shadow: $container-box-shadow;
+  }
+
   header nav {
     a:hover {
       border-radius: 2.6rem;
@@ -96,23 +130,16 @@
     }
   }
 
-  footer div:first-child a:hover {
-    border-bottom: solid 1.5px $nav-button-color;
-  }
-}
-
-@media (hover: none) {
-  header nav {
-    a:hover {
-      border: none;
-    }
-
-    a:last-child:hover {
-      box-shadow: none;
-    }
+  main .portfolio-block__project:hover {
+    transition: all 0.5s;
+    background-color: #758091;
   }
 
-  footer div:first-child a:hover {
-    border: none;
+  footer {
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    div:first-child a:hover {
+      border-bottom: solid 1.5px $nav-button-color;
+    }
   }
 }
