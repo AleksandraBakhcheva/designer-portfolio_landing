@@ -132,7 +132,7 @@
 
   main .portfolio-block__project:hover {
     transition: all 0.5s;
-    background-color: #758091;
+    background-color: $portfolio-block-color-hover;
   }
 
   footer {
