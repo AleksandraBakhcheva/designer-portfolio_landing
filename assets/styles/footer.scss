@@ -8,7 +8,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3.6rem;
+    padding: 1rem 1.6rem;
     gap: 1rem;
     font-size: 1.5rem;
 
@@ -23,7 +23,7 @@ footer {
     a {
       margin: 1.2rem 2rem;
       padding-bottom: 0.5rem;
-      transition: all 0.2s;
+      transition: all 0.5s;
       text-decoration: none;
       border-bottom: solid 1.5px transparent;
       color: $nav-button-color;
@@ -32,6 +32,7 @@ footer {
 
   #email a {
     border: none;
+    margin: 0;
 
     &:hover {
       border: none;
