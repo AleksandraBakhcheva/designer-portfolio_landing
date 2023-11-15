@@ -1,0 +1,64 @@
+@import "./variables.scss";
+
+main {
+  .main__general-block,
+  .main__about-block,
+  .main__portfolio-block {
+    display: grid;
+    padding: 3rem 14rem;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+
+    img {
+      max-width: 400px;
+    }
+
+    .general-block__header,
+    .about-block__header,
+    .portfolio-block__header {
+      font-size: 4rem;
+    }
+
+    .general-block__text,
+    .about-block__text,
+    .contacts-block__text {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.6rem;
+      line-height: 170%;
+      text-align: justify;
+    }
+  }
+
+  .main__general-block div:last-child {
+    margin-top: 4rem;
+  }
+
+  .main__about-block {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    gap: 2%;
+  }
+
+  .main__portfolio-block {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+
+    .portfolio-block__project {
+      display: flex;
+      margin: 1rem;
+      padding: 0.5rem;
+      justify-content: center;
+      background-color: $portfolio-block-color;
+    }
+
+    div img {
+      max-height: 500px;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
