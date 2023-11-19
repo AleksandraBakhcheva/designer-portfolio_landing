@@ -31,13 +31,6 @@ body {
 /* colors */
 /* shadows */
 /* borders */
-.theme {
-  position: absolute;
-  top: 1.5%;
-  right: 3%;
-  cursor: pointer;
-}
-
 html[data-theme=dark] {
   color-scheme: dark;
 }
@@ -46,26 +39,14 @@ html[data-theme=dark] nav a {
   color: #ffffff;
 }
 
-[data-theme=dark] .theme-toggle {
-  --icon-fill: hsl(210 10% 70%);
-  --icon-fill-hover: hsl(210 15% 90%);
+.theme-switcher {
+  position: absolute;
+  top: 1.5%;
+  right: 3%;
+  cursor: pointer;
 }
-
-.sun-and-moon > :is(.moon, .sun, .sun-beams) {
+.theme-switcher .sun-and-moon > :is(.moon, .sun, .sun-beams) {
   transform-origin: center;
-}
-
-.sun-and-moon > .sun-beams {
-  stroke: var(--icon-fill);
-  stroke-width: 2px;
-}
-
-.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
-  stroke: var(--icon-fill-hover);
-}
-
-[data-theme=dark] .sun-and-moon > .sun {
-  transform: scale(1.75);
 }
 
 [data-theme=dark] .sun-and-moon > .sun-beams {
