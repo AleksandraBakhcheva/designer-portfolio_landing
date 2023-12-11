@@ -47,3 +47,31 @@ window
     THEME.value = isDark ? "dark" : "light";
     setThemeColor();
   });
+
+let items = document.querySelectorAll(".portfolio-block__slider img");
+const NEXTPROJECT = document.querySelector(".slider-next");
+const PREVIOUSPROJECT = document.querySelector(".slider-previous");
+let count = 0;
+
+function getNextProject() {
+  items[count].classList.remove("active");
+  if (count < items.length - 1) {
+    count++;
+  } else {
+    count = 0;
+  }
+  items[count].classList.add("active");
+}
+
+function getPreviousProject() {
+  items[count].classList.remove("active");
+  if (count > 0) {
+    count--;
+  } else {
+    count = items.length - 1;
+  }
+  items[count].classList.add("active");
+}
+
+NEXTPROJECT.addEventListener("click", getNextProject);
+PREVIOUSPROJECT.addEventListener("click", getPreviousProject);
