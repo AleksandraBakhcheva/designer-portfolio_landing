@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Pacifico&family=Roboto&display=swap");
 /* variables */
 /* colors */
-/* shadows */
+/* shadows and gradients */
 /* borders */
 * {
   padding: 0;
@@ -29,7 +29,7 @@ body {
 
 /* variables */
 /* colors */
-/* shadows */
+/* shadows and gradients */
 /* borders */
 html[data-theme=dark] {
   color-scheme: dark;
@@ -88,13 +88,14 @@ html[data-theme=dark] nav a {
 }
 /* variables */
 /* colors */
-/* shadows */
+/* shadows and gradients */
 /* borders */
 header {
   display: flex;
   padding: 6rem;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(211, 216, 220, 0.1);
 }
 header .header__logo {
   font-family: "Pacifico", cursive;
@@ -126,11 +127,12 @@ header nav a:last-child {
 
 /* variables */
 /* colors */
-/* shadows */
+/* shadows and gradients */
 /* borders */
 main .main__general-block,
 main .main__about-block,
-main .main__portfolio-block {
+main .main__portfolio-block,
+main .main__cv-block {
   display: grid;
   padding: 3rem 14rem;
   grid-template-columns: 1fr 1.5fr;
@@ -138,29 +140,46 @@ main .main__portfolio-block {
 }
 main .main__general-block img,
 main .main__about-block img,
-main .main__portfolio-block img {
-  max-width: 400px;
+main .main__portfolio-block img,
+main .main__cv-block img {
+  max-width: 95%;
 }
 main .main__general-block .general-block__header,
 main .main__general-block .about-block__header,
 main .main__general-block .portfolio-block__header,
+main .main__general-block .cv-block__header,
 main .main__about-block .general-block__header,
 main .main__about-block .about-block__header,
 main .main__about-block .portfolio-block__header,
+main .main__about-block .cv-block__header,
 main .main__portfolio-block .general-block__header,
 main .main__portfolio-block .about-block__header,
-main .main__portfolio-block .portfolio-block__header {
+main .main__portfolio-block .portfolio-block__header,
+main .main__portfolio-block .cv-block__header,
+main .main__cv-block .general-block__header,
+main .main__cv-block .about-block__header,
+main .main__cv-block .portfolio-block__header,
+main .main__cv-block .cv-block__header {
+  text-align: center;
   font-size: 4rem;
+  letter-spacing: 1rem;
 }
 main .main__general-block .general-block__text,
 main .main__general-block .about-block__text,
+main .main__general-block .cv-block__text,
 main .main__general-block .contacts-block__text,
 main .main__about-block .general-block__text,
 main .main__about-block .about-block__text,
+main .main__about-block .cv-block__text,
 main .main__about-block .contacts-block__text,
 main .main__portfolio-block .general-block__text,
 main .main__portfolio-block .about-block__text,
-main .main__portfolio-block .contacts-block__text {
+main .main__portfolio-block .cv-block__text,
+main .main__portfolio-block .contacts-block__text,
+main .main__cv-block .general-block__text,
+main .main__cv-block .about-block__text,
+main .main__cv-block .cv-block__text,
+main .main__cv-block .contacts-block__text {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 170%;
@@ -169,34 +188,81 @@ main .main__portfolio-block .contacts-block__text {
 main .main__general-block div:last-child {
   margin-top: 4rem;
 }
-main .main__about-block {
+main .main__about-block,
+main .main__cv-block {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   gap: 2%;
+  background-color: rgba(211, 216, 220, 0.1);
+}
+main .main__about-block ul,
+main .main__cv-block ul {
+  margin-left: 5%;
+}
+main .main__about-block li,
+main .main__cv-block li {
+  list-style-type: circle;
 }
 main .main__portfolio-block {
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
+  padding: 12rem 14rem;
 }
-main .main__portfolio-block .portfolio-block__project {
+main .main__portfolio-block .portfolio-block__projects {
   display: flex;
-  margin: 1rem;
-  padding: 0.5rem;
-  justify-content: center;
-  background-color: #dceff7;
+  justify-content: space-between;
 }
-main .main__portfolio-block div img {
-  max-height: 500px;
+main .main__portfolio-block .portfolio-block__projects .portfolio-block__buttons {
+  display: flex;
+  align-items: center;
 }
-main .main__portfolio-block img {
+main .main__portfolio-block .portfolio-block__projects .portfolio-block__buttons button {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  text-decoration: none;
   cursor: pointer;
+  color: #333333;
+}
+main .main__portfolio-block .portfolio-block__projects .portfolio-block__slider img {
+  display: none;
+}
+main .main__portfolio-block .portfolio-block__projects .portfolio-block__slider img.active {
+  display: block;
+  -webkit-animation: fadeImg 0.8s;
+          animation: fadeImg 0.8s;
+}
+main .main__portfolio-block .portfolio-block__projects .portfolio-block__project {
+  display: flex;
+  justify-content: center;
+}
+main .cv-block__text h3 {
+  margin-top: 1.5%;
+}
+main .cv-block__text h4 {
+  margin: 1% 0;
 }
 
+@-webkit-keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* variables */
 /* colors */
-/* shadows */
+/* shadows and gradients */
 /* borders */
 footer {
   padding: 2%;
@@ -231,6 +297,7 @@ footer #email a {
 }
 footer #email a:hover {
   border: none;
+  color: #e62118;
 }
 footer .footer__links {
   display: flex;
@@ -241,12 +308,16 @@ footer .footer__links {
 }
 footer .footer__links a {
   text-decoration: none;
+  transition: all 0.5s;
   color: #ffffff;
+}
+footer .footer__links a:hover {
+  color: #e62118;
 }
 
 /* variables */
 /* colors */
-/* shadows */
+/* shadows and gradients */
 /* borders */
 @media screen and (max-width: 1400px) {
   html {
@@ -265,11 +336,17 @@ main .main__about-block,
 main .main__portfolio-block {
     padding: 3rem 5rem;
   }
-  main img {
-    width: 95%;
-  }
 }
 @media screen and (max-width: 800px) {
+  main img {
+    display: none;
+  }
+  main .main__general-block {
+    position: relative;
+    grid-template-columns: 1fr;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/ui-ux-design.png");
+    background-size: auto;
+  }
   main .main__portfolio-block {
     grid-template-columns: 1fr;
   }
@@ -294,9 +371,6 @@ main .main__portfolio-block {
   main .main__general-block {
     padding: 0 6rem;
     grid-template-columns: 1fr;
-  }
-  main .main__general-block div:first-child {
-    display: none;
   }
   main .main__general-block div:last-child {
     margin-top: 0;
@@ -345,10 +419,14 @@ main .main__portfolio-block {
     border-radius: 2.6rem;
     box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
   }
-  main .portfolio-block__project:hover {
-    transition: all 0.5s;
-    background-color: #758091;
+  .portfolio-block__buttons button:hover {
+    border-radius: 2.6rem;
+    border: 1px solid #544d4d;
   }
+  /* main .portfolio-block__project:hover {
+    transition: all 0.5s;
+    background-color: $portfolio-block-color-hover;
+  } */
   footer {
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
