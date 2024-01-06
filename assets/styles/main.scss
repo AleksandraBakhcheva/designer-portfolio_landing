@@ -3,24 +3,29 @@
 main {
   .main__general-block,
   .main__about-block,
-  .main__portfolio-block {
+  .main__portfolio-block,
+  .main__cv-block {
     display: grid;
     padding: 3rem 14rem;
     grid-template-columns: 1fr 1.5fr;
     align-items: center;
 
     img {
-      max-width: 400px;
+      max-width: 95%;
     }
 
     .general-block__header,
     .about-block__header,
-    .portfolio-block__header {
+    .portfolio-block__header,
+    .cv-block__header {
+      text-align: center;
       font-size: 4rem;
+      letter-spacing: 1rem;
     }
 
     .general-block__text,
     .about-block__text,
+    .cv-block__text,
     .contacts-block__text {
       font-family: "Open Sans", sans-serif;
       font-size: 1.6rem;
@@ -29,36 +34,84 @@ main {
     }
   }
 
-  .main__general-block div:last-child {
-    margin-top: 4rem;
+  .main__general-block {
+    div:last-child {
+      margin-top: 4rem;
+    }
   }
 
-  .main__about-block {
+  .main__about-block,
+  .main__cv-block {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     gap: 2%;
+    background-color: $block-background-color;
+
+    ul {
+      margin-left: 5%;
+    }
+
+    li {
+      list-style-type: circle;
+    }
   }
 
   .main__portfolio-block {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
+    padding: 12rem 14rem;
 
-    .portfolio-block__project {
+    .portfolio-block__projects {
       display: flex;
-      margin: 1rem;
-      padding: 0.5rem;
-      justify-content: center;
-      background-color: $portfolio-block-color;
+      justify-content: space-between;
+
+      .portfolio-block__buttons {
+        display: flex;
+        align-items: center;
+
+        button {
+          padding: 1rem 1.5rem;
+          font-size: 1.2rem;
+          border: 1px solid transparent;
+          transition: all 0.5s;
+          text-decoration: none;
+          cursor: pointer;
+          color: $font-main-color;
+        }
+      }
+
+      .portfolio-block__slider img {
+        display: none;
+      }
+
+      .portfolio-block__slider img.active {
+        display: block;
+        animation: fadeImg 0.8s;
+      }
+
+      .portfolio-block__project {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .cv-block__text {
+    h3 {
+      margin-top: 1.5%;
     }
 
-    div img {
-      max-height: 500px;
+    h4 {
+      margin: 1% 0;
     }
+  }
+}
 
-    img {
-      cursor: pointer;
-    }
+@keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

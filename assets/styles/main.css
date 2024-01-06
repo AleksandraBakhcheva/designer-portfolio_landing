@@ -1,10 +1,11 @@
 /* variables */
 /* colors */
-/* shadows */
+/* shadows and gradients */
 /* borders */
 main .main__general-block,
 main .main__about-block,
-main .main__portfolio-block {
+main .main__portfolio-block,
+main .main__cv-block {
   display: grid;
   padding: 3rem 14rem;
   grid-template-columns: 1fr 1.5fr;
@@ -12,29 +13,46 @@ main .main__portfolio-block {
 }
 main .main__general-block img,
 main .main__about-block img,
-main .main__portfolio-block img {
-  max-width: 400px;
+main .main__portfolio-block img,
+main .main__cv-block img {
+  max-width: 95%;
 }
 main .main__general-block .general-block__header,
 main .main__general-block .about-block__header,
 main .main__general-block .portfolio-block__header,
+main .main__general-block .cv-block__header,
 main .main__about-block .general-block__header,
 main .main__about-block .about-block__header,
 main .main__about-block .portfolio-block__header,
+main .main__about-block .cv-block__header,
 main .main__portfolio-block .general-block__header,
 main .main__portfolio-block .about-block__header,
-main .main__portfolio-block .portfolio-block__header {
+main .main__portfolio-block .portfolio-block__header,
+main .main__portfolio-block .cv-block__header,
+main .main__cv-block .general-block__header,
+main .main__cv-block .about-block__header,
+main .main__cv-block .portfolio-block__header,
+main .main__cv-block .cv-block__header {
+  text-align: center;
   font-size: 4rem;
+  letter-spacing: 1rem;
 }
 main .main__general-block .general-block__text,
 main .main__general-block .about-block__text,
+main .main__general-block .cv-block__text,
 main .main__general-block .contacts-block__text,
 main .main__about-block .general-block__text,
 main .main__about-block .about-block__text,
+main .main__about-block .cv-block__text,
 main .main__about-block .contacts-block__text,
 main .main__portfolio-block .general-block__text,
 main .main__portfolio-block .about-block__text,
-main .main__portfolio-block .contacts-block__text {
+main .main__portfolio-block .cv-block__text,
+main .main__portfolio-block .contacts-block__text,
+main .main__cv-block .general-block__text,
+main .main__cv-block .about-block__text,
+main .main__cv-block .cv-block__text,
+main .main__cv-block .contacts-block__text {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 170%;
@@ -43,27 +61,75 @@ main .main__portfolio-block .contacts-block__text {
 main .main__general-block div:last-child {
   margin-top: 4rem;
 }
-main .main__about-block {
+main .main__about-block,
+main .main__cv-block {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   gap: 2%;
+  background-color: rgba(211, 216, 220, 0.1);
+}
+main .main__about-block ul,
+main .main__cv-block ul {
+  margin-left: 5%;
+}
+main .main__about-block li,
+main .main__cv-block li {
+  list-style-type: circle;
 }
 main .main__portfolio-block {
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
+  padding: 12rem 14rem;
 }
-main .main__portfolio-block .portfolio-block__project {
+main .main__portfolio-block .portfolio-block__projects {
   display: flex;
-  margin: 1rem;
-  padding: 0.5rem;
-  justify-content: center;
-  background-color: #dceff7;
+  justify-content: space-between;
 }
-main .main__portfolio-block div img {
-  max-height: 500px;
+main .main__portfolio-block .portfolio-block__projects .portfolio-block__buttons {
+  display: flex;
+  align-items: center;
 }
-main .main__portfolio-block img {
+main .main__portfolio-block .portfolio-block__projects .portfolio-block__buttons button {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  text-decoration: none;
   cursor: pointer;
+  color: #333333;
+}
+main .main__portfolio-block .portfolio-block__projects .portfolio-block__slider img {
+  display: none;
+}
+main .main__portfolio-block .portfolio-block__projects .portfolio-block__slider img.active {
+  display: block;
+  -webkit-animation: fadeImg 0.8s;
+          animation: fadeImg 0.8s;
+}
+main .main__portfolio-block .portfolio-block__projects .portfolio-block__project {
+  display: flex;
+  justify-content: center;
+}
+main .cv-block__text h3 {
+  margin-top: 1.5%;
+}
+main .cv-block__text h4 {
+  margin: 1% 0;
+}
+
+@-webkit-keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */
