@@ -1,12 +1,13 @@
 /* variables */
 /* colors */
-/* shadows */
+/* shadows and gradients */
 /* borders */
 header {
   display: flex;
   padding: 6rem;
   justify-content: space-between;
   align-items: center;
+  background-color: #d3d8dc;
 }
 header .header__logo {
   font-family: "Pacifico", cursive;

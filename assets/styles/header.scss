@@ -5,6 +5,7 @@ header {
   padding: 6rem;
   justify-content: space-between;
   align-items: center;
+  background-color: $block-background-color;
 
   .header__logo {
     font-family: "Pacifico", cursive;
@@ -32,7 +33,7 @@ header {
     a:last-child {
       border-radius: 2.6rem;
       align-self: center;
-      color: $nav-button-color;
+      color: $nav-main-color;
       background-color: $nav-button-background;
     }
   }
