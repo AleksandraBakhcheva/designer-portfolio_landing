@@ -1,6 +1,6 @@
 /* variables */
 /* colors */
-/* shadows */
+/* shadows and gradients */
 /* borders */
 footer {
   padding: 2%;
@@ -35,6 +35,7 @@ footer #email a {
 }
 footer #email a:hover {
   border: none;
+  color: #e62118;
 }
 footer .footer__links {
   display: flex;
@@ -45,5 +46,9 @@ footer .footer__links {
 }
 footer .footer__links a {
   text-decoration: none;
+  transition: all 0.5s;
   color: #ffffff;
+}
+footer .footer__links a:hover {
+  color: #e62118;
 }/*# sourceMappingURL=footer.css.map */

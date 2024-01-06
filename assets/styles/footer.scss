@@ -17,7 +17,7 @@ footer {
       flex-wrap: wrap;
       flex-direction: column;
       align-items: flex-start;
-      color: $nav-button-color;
+      color: $nav-main-color;
     }
 
     a {
@@ -26,7 +26,7 @@ footer {
       transition: all 0.5s;
       text-decoration: none;
       border-bottom: solid 1.5px transparent;
-      color: $nav-button-color;
+      color: $nav-main-color;
     }
   }
 
@@ -36,6 +36,7 @@ footer {
 
     &:hover {
       border: none;
+      color: $footer-links-hover;
     }
   }
 
@@ -44,11 +45,16 @@ footer {
     padding: 0.2%;
     justify-content: center;
     font-size: 1.1rem;
-    color: $nav-button-color;
+    color: $nav-main-color;
 
     a {
       text-decoration: none;
-      color: $nav-button-color;
+      transition: all 0.5s;
+      color: $nav-main-color;
+
+      &:hover {
+        color: $footer-links-hover;
+      }
     }
   }
 }
