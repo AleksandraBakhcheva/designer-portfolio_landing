@@ -8,9 +8,9 @@ Landing for Daniil, senior ui / ux designer 🖥
 
 ## Screens
 
-<img width="820" alt="desktop" src="https://github.com/AleksandraBakhcheva/todo-list_app/assets/76097160/4fb211cf-9c09-4a3f-b2f4-79a0e7202e7a">
-<img width="195" alt="mobile" src="https://github.com/AleksandraBakhcheva/todo-list_app/assets/76097160/cd56285f-f0ef-4946-9564-d075df12e9a0">
-<img width="621" alt="tablet" src="https://github.com/AleksandraBakhcheva/todo-list_app/assets/76097160/aa32ed1b-1171-46b8-ba58-28c2f4513e4f">
+<img width="820" alt="desktop" src="https://github.com/AleksandraBakhcheva/designer-portfolio_landing/assets/76097160/381d8110-ab78-4af0-933e-e1fbb6a66957">
+<img width="195" alt="mobile" src="https://github.com/AleksandraBakhcheva/designer-portfolio_landing/assets/76097160/ae1470b2-247d-4ce9-8bd5-2cfbbabc8cca">
+<img width="621" alt="tablet" src="https://github.com/AleksandraBakhcheva/designer-portfolio_landing/assets/76097160/dedce74d-e7f5-4d37-bf8e-9384c4ed9c91">
 
 ## Technology stack
 
