@@ -4,7 +4,7 @@ Landing for Daniil, senior ui / ux designer 🖥
 
 ## Description
 
-<p>This landing page allows you to get general data (resume, portfolio, contacts) about designer. Can be used as draft to create your own portfolio or resume.</p>
+<p>This landing page with theme-switcher allows you to get general data (resume, portfolio, contacts). Can be used as draft to create your own portfolio or resume.</p>
 
 ## Screens
 
