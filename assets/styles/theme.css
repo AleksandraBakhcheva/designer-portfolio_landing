@@ -9,6 +9,9 @@ html[data-theme=dark] .header__logo,
 html[data-theme=dark] nav a {
   color: #ffffff;
 }
+html[data-theme=dark] .portfolio-block__buttons button {
+  background-color: #ffffff;
+}
 
 .theme-switcher {
   position: absolute;

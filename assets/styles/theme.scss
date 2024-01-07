@@ -7,6 +7,10 @@ html[data-theme="dark"] {
   nav a {
     color: $nav-main-color;
   }
+
+  .portfolio-block__buttons button {
+    background-color: $nav-main-color;
+  }
 }
 
 .theme-switcher {
